@@ -14,5 +14,10 @@ namespace LifeSchedule
         public DateTime StartDate { get; }
         public DateTime EndDate { get; }
         public int WeeksOfLife { get; }
+
+        public int CurrentWeek()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

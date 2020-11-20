@@ -33,5 +33,16 @@ namespace LifeSchedule.UnitTests
 
             Assert.Equal(life.WeeksOfLife, lifeInWeeks);
         }
+
+        [Fact]
+        public void KnowWhichIsTheCurrentWeek()
+        {
+            var today = DateTime.UtcNow;
+            var life = new Life(today.AddYears(-10));
+            var expectedWeeks = 520;
+
+            Assert.Equal(life.CurrentWeek(), expectedWeeks);
+
+        }
     }
 }

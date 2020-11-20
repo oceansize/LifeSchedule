@@ -23,5 +23,15 @@ namespace LifeSchedule.UnitTests
 
             Assert.Equal(life.EndDate, expiration);
         }
+
+        [Fact]
+        public void HaveFourThousandSixHundredAndEightyWeeks()
+        {
+            var birthday = new DateTime(1995, 03, 02);
+            var lifeInWeeks = 90 * 52;
+            var life = new Life(birthday);
+
+            Assert.Equal(life.WeeksOfLife, lifeInWeeks);
+        }
     }
 }

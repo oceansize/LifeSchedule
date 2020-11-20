@@ -7,8 +7,10 @@ namespace LifeSchedule
         public Life(DateTime startDate)
         {
             StartDate = startDate;
+            EndDate = startDate.AddYears(90);
         }
 
         public DateTime StartDate { get; }
+        public DateTime EndDate { get; }
     }
 }
